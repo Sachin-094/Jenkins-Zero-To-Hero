@@ -1,12 +1,13 @@
 pipeline {
   agent none
   stages {
- Stage ('Checkout')
- {
- steps {
- checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Sachin-094/Jenkins-Zero-To-Hero']])
- }
- }
+    
+    stage('Checkout') {
+           steps {
+             checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Sachin-094/Jenkins-Zero-To-Hero']])
+           }
+         }
+
     stage('Back-end') {
       agent {
         docker { image 'maven:3.8.1-adoptopenjdk-11' }
