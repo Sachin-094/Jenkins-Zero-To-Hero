@@ -3,6 +3,7 @@ pipeline {
   stages {
     
     stage('Checkout') {
+    agent any
            steps {
              checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Sachin-094/Jenkins-Zero-To-Hero']])
            }
