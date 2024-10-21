@@ -9,7 +9,7 @@ pipeline {
     stage('Checkout') {
       steps {
         sh 'Checking out the source code from repository'
-        git branch: 'main', url: 'https://github.com/Sachin-094/Jenkins-Zero-To-Hero.git'
+        // git branch: 'main', url: 'https://github.com/Sachin-094/Jenkins-Zero-To-Hero.git'
       }
     }
     stage('Build and Test') {
